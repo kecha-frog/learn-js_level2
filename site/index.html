@@ -8,32 +8,30 @@
 <body>
 <div id="app">
     <header>
-        <input id="search" v-model="search" v-on:input="searchHandler">
-        <button class="cart-button" type="button" v-on:click="openCartHandler">Корзина {{cart.length}}</button>
-        <div v-if="isCartOpen" class="Cart">
-            <ul>
-                <li v-for="(good, index) in cart">{{good.title}} {{good.price}}
-                    <button v-on:click="removeCartHandler(index)">-</button>
-                </li>
-            </ul>
-        </div>
+        <search v-bind:goodsapp="goods" v-on:filtered="viewFiltered"></search>
+        <cart v-on:remove="removeFromCartHandler">
+            <goods-item
+                    v-for="good in cart"
+                    v-bind:title="good.title"
+                    v-bind:price="good.price"
+                    v-bind:id="good.id"
+            />
+        </cart>
     </header>
     <main>
-        <div class="goods-list">
-            <div v-if="goods.length === 0"> Нет данных</div>
-            <template v-if="goods.length !== 0">
-                <div class="goods-item" v-for="(item, index) in filteredGoods">
-                    <h3>{{ item.title }}</h3>
-                    <p>{{ item.price }}</p>
-                    <button v-on:click="addCartHandler(index)">Добавить</button>
-                </div>
-            </template>
+        <div class="goods-list" v-on:click="addToCartHandler">
+            <goods-item
+                    v-for="good in filteredGoods"
+                    v-bind:title="good.title"
+                    v-bind:price="good.price"
+                    v-bind:id="good.id"
+            ></goods-item>
         </div>
     </main>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
-
