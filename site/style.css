@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+main {
+    padding: 35px 100px;
+}
+
+header {
+    width: 100%;
+    background-color: mediumseagreen;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart-button {
+    padding: 5px 8px;
+    background-color: white;
+    margin: 20px;
+}
+
+.goods-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 1em;
+}
+
+.goods-item {
+    box-sizing: content-box;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
