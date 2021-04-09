@@ -10,7 +10,7 @@ header {
     width: 100%;
     background-color: mediumseagreen;
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
     align-items: center;
 }
 
@@ -33,4 +33,3 @@ header {
     text-align: center;
     padding: 10px;
 }
-
