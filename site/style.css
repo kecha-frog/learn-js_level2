@@ -8,17 +8,16 @@ main {
 
 header {
     width: 100%;
-    height: 7vh;
     background-color: mediumseagreen;
-    display: grid;
-    justify-content: end;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .cart-button {
     padding: 5px 8px;
     background-color: white;
-    margin-right: 100px;
+    margin: 20px;
 }
 
 .goods-list {
@@ -35,18 +34,3 @@ header {
     padding: 10px;
 }
 
-.good-pic {
-    height: 20vh;
-    background-color: black;
-}
-
-.good-button {
-    padding: 3px;
-    border: 1px solid #000;
-    align-self: center
-}
-
-.divPriceButton {
-    display: flex;
-    justify-content: space-between;
-}
