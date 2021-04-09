@@ -27,7 +27,7 @@ header {
     grid-row-gap: 1em;
 }
 
-.goods-item {
+.goods_item {
     box-sizing: content-box;
     border: 1px solid #000;
     text-align: center;

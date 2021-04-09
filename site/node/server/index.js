@@ -7,7 +7,7 @@ const app = express();
 app.listen(3000, () => {
     console.log('server is running on port http://127.0.0.1:3000/!');
 });
-app.use(express.static('../public'))
+app.use(express.static('../dist'))
 
 app.get('/data', (req, res) => {
     fs.readFile('./goods.json', 'utf-8', (err, data) => {
@@ -106,6 +106,5 @@ app.delete('/cart', bodyParser.json(), (req, res) => {
         }
     })
 })
-
 
 
